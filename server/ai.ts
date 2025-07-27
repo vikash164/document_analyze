@@ -9,6 +9,7 @@ export const getAiResult = async (prompt: string, file: File) => {
 
     const result = await generateText({
         model: google('gemini-1.5-flash'),
+        apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
         messages: [
             {
                 role: 'user',
